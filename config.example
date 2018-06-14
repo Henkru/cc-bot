@@ -1,0 +1,17 @@
+[cc]
+server = "irc.inet.fi"
+nick = "ccbot0231"
+channel = "#awwcc12"
+
+[networks]
+  [networks.ircnet]
+  server = "irc.inet.fi"
+  nick = "bbott55677"
+  
+  [networks.efnet]
+  server = "efnet.portlane.se"
+  nick = "bbott55677"
+  
+  [networks.quakenet]
+  server = "irc.quakenet.org"
+  nick = "bbott55677"
