@@ -8,7 +8,7 @@ This is a simple IRC based C&C.
     * Python 3
     * Pip
 * Install:
-    * (Optional) If you are fancy: `virtualenv -p python3 env && source env/bin/active`
+    * (Optional) If you are fancy: `virtualenv -p python3 env && source env/bin/activate`
     * Install dependencies: `pip install -r requirements.txt`
     * Create the config: `cp config.example config`
 * Run:

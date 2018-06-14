@@ -34,7 +34,7 @@ def main():
     bot_nick = get_or_die(bot_config, 'nick', 'Give me a nick!')
     channel = get_or_die(bot_config, 'channel', 'Give me a channel!')
     networks = bot_config = get_or_die(config, 'networks', 'I need some networks!')
-    
+
     port = bot_config.get('port', 6667)
     server_password = bot_config.get('server_password', None)
     channel_password = bot_config.get('channel_password', '')

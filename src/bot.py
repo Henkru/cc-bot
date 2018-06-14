@@ -3,8 +3,12 @@ import logging
 import irc.bot
 import irc.client
 import irc.client_aio
+from jaraco.stream import buffer
 
 import command
+
+# Fall back to latin-1 if UTF-8 does not work. 2018...
+irc.client.ServerConnection.buffer_class = buffer.LenientDecodingLineBuffer
 
 class CCClient(irc.client.SimpleIRCClient):
     def __init__(self, name, server, port, nickname, password):
@@ -43,7 +47,7 @@ class CCBot(irc.bot.SingleServerIRCBot):
     def __init__(self, server, port, password, nickname, channel, channel_password, delimiter):
         srv = irc.bot.ServerSpec(server, port ,password)
         irc.bot.SingleServerIRCBot.__init__(self, [srv], nickname, nickname)
-        
+
         self.channel = channel
         self.channel_password = channel_password
         self.command_delimiter = delimiter
